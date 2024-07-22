@@ -1,4 +1,4 @@
-import { ref as e, onMounted as a, resolveComponent as i, openBlock as s, createElementBlock as l, createElementVNode as t, createVNode as _, createBlock as p, defineCustomElement as u } from "vue";
+import { ref as e, onMounted as a, resolveComponent as i, openBlock as s, createElementBlock as l, createElementVNode as t, createVNode as p, createBlock as _, defineCustomElement as u } from "vue";
 const m = { style: { display: "flex", "justify-content": "space-around" } }, d = /* @__PURE__ */ t("h2", null, "Check your Chart", -1), h = {
   __name: "LineChart",
   setup(c) {
@@ -23,7 +23,7 @@ const m = { style: { display: "flex", "justify-content": "space-around" } }, d =
         t("div", m, [
           t("div", null, [
             d,
-            _(r, {
+            p(r, {
               width: "500",
               type: "line",
               options: n.value,
@@ -34,10 +34,13 @@ const m = { style: { display: "flex", "justify-content": "space-around" } }, d =
       ]);
     };
   }
-}, f = {
+}, x = {
   __name: "App",
   setup(c) {
-    return (n, o) => (s(), p(h));
+    return (n, o) => (s(), _(h));
   }
-}, x = u(f);
-customElements.define("custom-chart-widget", x);
+}, f = u(x);
+customElements.define("custom-chart-widget", f);
+export {
+  f as CustomChartWidget
+};

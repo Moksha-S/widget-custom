@@ -3,12 +3,12 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue({ customElement: true })],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.js'), // Adjust to match your entry point
-      name: 'MyWidget',
-      // fileName: (format) => `my-widget.${format}.js`,
+      name: 'CustomChartWidget',
+      fileName: (format) => `index.${format}.js`,
       formats: ['es', 'umd'] // Outputs both ES and UMD formats
     },
     rollupOptions: {
