@@ -9,4 +9,4 @@ export const CustomChartWidget = defineCustomElement(App, {
   }
 })
 
-customElements.define('custom-chart-widget', CustomChartWidget)
+// customElements.define('custom-chart-widget', CustomChartWidget)

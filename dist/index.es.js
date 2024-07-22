@@ -9035,12 +9035,11 @@ const ci = { style: { display: "flex", "justify-content": "space-around" } }, di
   setup(j) {
     return (vt, ht) => (be(), ri(ui));
   }
-}, fi = oi(pi, {
+}, xi = oi(pi, {
   components: {
     apexchart: Xt
   }
 });
-customElements.define("custom-chart-widget", fi);
 export {
-  fi as CustomChartWidget
+  xi as CustomChartWidget
 };
