@@ -11,6 +11,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import VueApexCharts from 'vue3-apexcharts'
 const optionsD = ref({})
 const seriesD = ref([44, 55, 41, 17, 15])
 const options = ref({
@@ -30,4 +31,12 @@ const series = ref([
 ])
 
 onMounted(() => {})
+</script>
+
+<script>
+export default {
+  components: {
+    apexchart: VueApexCharts
+  }
+}
 </script>

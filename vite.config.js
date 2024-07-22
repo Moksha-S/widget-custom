@@ -3,7 +3,15 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default defineConfig({
-  plugins: [vue({ customElement: true })],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.includes('-')
+        }
+      }
+    })
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.js'), // Adjust to match your entry point
